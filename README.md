@@ -1,4 +1,4 @@
-# Overwatch-cm-360-rb
+# Overwatch App: cm/360° converter and sensitivity equalizer (Ruby version)
 A Ruby variation of my JS Overwatch cm/360 web app.
 
 
