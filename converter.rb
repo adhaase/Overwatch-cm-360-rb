@@ -2,6 +2,6 @@
 # The end version will be split up appropriately into multiple files/functions, instead of being condensed into one file. 
 
 puts "Overwatch cm/360 conversion application - Ruby version."
-puts "\n"
+puts "\n" #puts adds a newline character (apart from the "\n")
 
-print "Please enter your mouse DPI: " 
+print "Please enter your mouse DPI: " # print does not include the newline char
