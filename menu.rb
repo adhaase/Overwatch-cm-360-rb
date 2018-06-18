@@ -25,14 +25,38 @@ def call_menu()
 end
 
 
+def cm_360_header()
+	print "------------------------------------------\n"
+	print "|      Cm/360 converter application      |\n"
+	print "------------------------------------------\n\n"
+end
+
+
+def validate_menu_option(menu_choice)
+	if menu_choice != 1 ||
+	   menu_choice != 2 ||
+	   menu_choice != 3 ||
+	   menu_choice != 4 return false
+	else return true
+end
+
+
+
 def evaluate_option(menu_choice)
+
+	if menu_choice == false
+		redo_menu_choice = gets
+		evaluate_option(redo_menu_choice)
+
 	if menu_choice == 1
-		print "You've chosen the cm/360 converter!"
+		cm_360_header()
 	elsif menu_choice == 2
 		print "You've chosen the Sensitivity equalizer!"
 	elsif menu_choice == 3
 		print "Here's the FAQ!"
+	elsif menu_choice == 4
+		Process.exit(0)
 	else
-		print "Time to exit!"
+		print "Not a valid choice! Please re-enter a valid integer: "
 	end
 end
