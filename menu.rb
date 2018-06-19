@@ -53,11 +53,6 @@ def evaluate_option(menu_choice)
 		menu_choice = redo_menu_choice.to_i # fixed an error here - previously I didn't have the to_i, which seems to have made the comparison in the following boolean a string to int comparison, which was not properly evaluated
 	end
 
-	print "THE MENU CHOICE IS : "
-	print menu_choice
-	print "\n"
-
-
 	if menu_choice == 1
 		cm_360_header()
 	elsif menu_choice == 2
