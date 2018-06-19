@@ -33,20 +33,30 @@ end
 
 
 def validate_menu_option(menu_choice)
-	if menu_choice != 1 ||
-	   menu_choice != 2 ||
-	   menu_choice != 3 ||
-	   menu_choice != 4 return false
-	else return true
+	if menu_choice == 1 ||
+	   menu_choice == 2 ||
+	   menu_choice == 3 ||
+	   menu_choice == 4
+	   return true
+	else return false
+	end
 end
 
 
 
 def evaluate_option(menu_choice)
 
-	if menu_choice == false
+	menu_validation = validate_menu_option(menu_choice) #bool - asserts the value of menu_choice is (1-4)
+	if menu_validation == false
+		print "Not a valid choice! Please re-enter a valid integer: "
 		redo_menu_choice = gets
-		evaluate_option(redo_menu_choice)
+		menu_choice = redo_menu_choice.to_i # fixed an error here - previously I didn't have the to_i, which seems to have made the comparison in the following boolean a string to int comparison, which was not properly evaluated
+	end
+
+	print "THE MENU CHOICE IS : "
+	print menu_choice
+	print "\n"
+
 
 	if menu_choice == 1
 		cm_360_header()
